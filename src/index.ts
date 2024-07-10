@@ -15,12 +15,14 @@ export const createBlogInput = z.object({
     title: z.string(),
     content: z.string(),
     published: z.boolean(),
+    topic: z.string(),
 });
 
 export const updateBlogInput = z.object({
     title: z.string().optional(),
     content: z.string().optional(),
     published: z.boolean().optional(),
+    topic: z.string().optional(),
 });
 
 export type SignUpInput = z.infer<typeof signUpInput>;
